@@ -1,0 +1,4 @@
+2025-11-03 17:20:48,008 - INFO - Nuevo usuario registrado: Jean 
+2025-11-03 17:21:05,751 - WARNING - Fallo de login para el usuario: Jean
+2025-11-03 17:21:41,583 - INFO - Nuevo usuario registrado: Admin
+2025-11-03 17:21:51,151 - INFO - Usuario logueado exitosamente: Admin
