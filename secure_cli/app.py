@@ -67,7 +67,7 @@ def login():
             if username == user_guardado and hashed_password == password_guardado:
                 logging.info(f"Usuario logueado exitosamente: {username}")
                 print(f"Bienvenido,{username}!")
-                return
+                return username
             
     logging.warning(f"Fallo de login para el usuario: {username}")
     print("Nombre de usuario o contrasena incorrectos.")
@@ -80,6 +80,13 @@ def agregar_libros():
 
     titulo = input("Ingrese el titulo del libro: ")
     autor = input("Ingrese el autor del libro: ")
+
+    with open(path,"r") as file:
+        for linea in file:
+            libro_titulo, autor = linea.strip().split(",")
+            if titulo.lower() == libro_titulo.lower():
+                print("El libro ya esta registrado.")
+                return
 
     
 
@@ -102,7 +109,10 @@ def ver_libros():
     print("\nLibros registrados:")
     with open(path,'r') as file:
         for linea in file:
-            titulo,autor = linea.strip().split(",")
+            linea = linea.strip()
+            if not linea or "," not in linea:
+                continue
+            titulo, autor = linea.split(",", 1)
             print(f"Titulo: {titulo}, Autor: {autor}")
 
 
@@ -120,23 +130,21 @@ def prestar_libro(username):
 
     
     disponible = "False"
-
-    with open(path_libros,'r') as file:
+    with open(path_libros, 'r') as file:
         for linea in file:
-            libro_titulo,autor = linea.strip().split(",")
+            libro_titulo, autor = linea.strip().split(",")
             if libro_titulo.lower() == titulo.lower():
-             disponible == "True"
-             print(f"El libro {libro_titulo} ha sido prestado exitosamente.")
+                disponible = "True"
 
+                with open(path_prestamos, 'a') as file:
+                    file.write(f"{libro_titulo},{username}\n")
 
-            with open(path_prestamos,'a') as file:
-                file.write(f"{libro_titulo},{username}\n")
-            logging.info(f"Libro prestado: {libro_titulo} por {username}")
-            break
-            
-    if not disponible:
-            print("El libro no esta disponible.")
-            return
+                logging.info(f"Libro prestado: {libro_titulo} por {username}")
+                print(f"Libro: {libro_titulo} prestado exitosamente")
+                break  
+
+    if disponible == "False":
+        print("El libro no esta disponible.")
 
 
 
@@ -176,13 +184,8 @@ def devolver_libro(username):
 
 
 
-
-
-
-
-
-def main(username):
- while True:
+def menu_usuario(username):
+    while True:
         print(f"\nBienvenido, {username}")
         print("1. Ver libros")
         print("2. Agregar libro")
@@ -206,5 +209,27 @@ def main(username):
         else:
             print("Opción inválida. Intente de nuevo.")
 
+
+
+
+
+def main():
+    while True:
+        print("\n1. Registrar")
+        print("2. Login")
+        print("3. Salir")
+        choice = input("Seleccione una opcion: ")
+
+        if choice == '1':
+            register()
+        elif choice == '2':
+            username = login()  
+            if username:
+                menu_usuario(username)
+        elif choice == '3':
+            print("Saliendo...")
+            break
+        else:
+            print("Opción inválida. Intente de nuevo.")
 
 main()

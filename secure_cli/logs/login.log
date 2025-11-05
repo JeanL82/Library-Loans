@@ -2,3 +2,19 @@
 2025-11-03 17:21:05,751 - WARNING - Fallo de login para el usuario: Jean
 2025-11-03 17:21:41,583 - INFO - Nuevo usuario registrado: Admin
 2025-11-03 17:21:51,151 - INFO - Usuario logueado exitosamente: Admin
+2025-11-05 16:22:39,057 - INFO - Nuevo usuario registrado: Jean Luis
+2025-11-05 16:22:50,638 - INFO - Usuario logueado exitosamente: Jean Luis
+2025-11-05 16:23:39,674 - INFO - Nuevo libro agregado: La charca  por Manuel Gandia
+2025-11-05 16:23:56,495 - INFO - Libro prestado: La charca  por Jean Luis
+2025-11-05 16:24:11,471 - INFO - Libro prestado: La charca  por Jean Luis
+2025-11-05 16:24:25,033 - INFO - Libro devuelto: La Charca  por Jean Luis
+2025-11-05 16:29:38,364 - INFO - Usuario logueado exitosamente: Jean Luis
+2025-11-05 16:30:54,616 - INFO - Nuevo libro agregado: La Llamarada por Enrique Laguerre
+2025-11-05 16:31:10,206 - INFO - Libro prestado: La charca  por Jean Luis
+2025-11-05 16:37:39,765 - INFO - Usuario logueado exitosamente: Jean Luis
+2025-11-05 16:39:34,867 - INFO - Usuario logueado exitosamente: Jean Luis
+2025-11-05 16:43:28,271 - WARNING - Fallo de login para el usuario: Jean luis
+2025-11-05 16:43:39,026 - INFO - Usuario logueado exitosamente: Jean Luis
+2025-11-05 16:44:18,341 - INFO - Libro prestado: La Llamarada por Jean Luis
+2025-11-05 16:44:34,410 - INFO - Libro devuelto: La Llamarada por Jean Luis
+2025-11-05 16:45:26,613 - INFO - Libro devuelto: La Charca  por Jean Luis
