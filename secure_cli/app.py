@@ -67,7 +67,8 @@ def login():
             if username == user_guardado and hashed_password == password_guardado:
                 logging.info(f"Usuario logueado exitosamente: {username}")
                 print(f"Bienvenido,{username}!")
-                return username
+                menu_usuario(username)
+                return 
             
     logging.warning(f"Fallo de login para el usuario: {username}")
     print("Nombre de usuario o contrasena incorrectos.")
@@ -129,12 +130,12 @@ def prestar_libro(username):
     titulo = input("Ingrese el titulo del libro a prestar: ")
 
     
-    disponible = "False"
+    disponible = False
     with open(path_libros, 'r') as file:
         for linea in file:
             libro_titulo, autor = linea.strip().split(",")
             if libro_titulo.lower() == titulo.lower():
-                disponible = "True"
+                disponible = True
 
                 with open(path_prestamos, 'a') as file:
                     file.write(f"{libro_titulo},{username}\n")
@@ -143,7 +144,7 @@ def prestar_libro(username):
                 print(f"Libro: {libro_titulo} prestado exitosamente")
                 break  
 
-    if disponible == "False":
+    if not disponible:
         print("El libro no esta disponible.")
 
 
@@ -232,4 +233,5 @@ def main():
         else:
             print("Opción inválida. Intente de nuevo.")
 
-main()
+if __name__ == "__main__":
+    main()
