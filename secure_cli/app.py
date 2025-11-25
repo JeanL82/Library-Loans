@@ -10,7 +10,7 @@ logging.basicConfig(
     force=True
 )
 
-def Hashpassword(password) :
+def Hashpassword(password):
     hashed = hashlib.sha256(password.encode()).hexdigest()
     return hashed
 
@@ -51,7 +51,7 @@ def login():
 
     if not os.path.exists(path):
         print("No hay usuarios registrados. Por favor registrese primero.")
-        return
+        return 
     
     
     
@@ -74,7 +74,7 @@ def login():
     print("Nombre de usuario o contrasena incorrectos.")
 
 
-def agregar_libros():
+def agregar_libros(username):
 
     os.makedirs("data",exist_ok=True)
     path = "data/libros.txt"
@@ -84,7 +84,7 @@ def agregar_libros():
 
     with open(path,"r") as file:
         for linea in file:
-            libro_titulo, autor = linea.strip().split(",")
+            libro_titulo, autor = linea.strip().split(",")      
             if titulo.lower() == libro_titulo.lower():
                 print("El libro ya esta registrado.")
                 return
@@ -95,7 +95,7 @@ def agregar_libros():
         file.write(f"{titulo},{autor}\n")
     print("Libro agregado exitosamente!")
 
-    logging.info(f"Nuevo libro agregado: {titulo} por {autor}")
+    logging.info(f"Nuevo libro agregado: {titulo} por {username}")
 
 
 
