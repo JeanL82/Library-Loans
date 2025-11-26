@@ -34,3 +34,9 @@ pip install pwinput
 4️⃣ Ejecutar el programa
 python app.py
 
+Credenciales de prueba
+
+Puedes iniciar sesión usando este usuario predefinido:
+
+Usuario: Admin  
+Contraseña: 1234
