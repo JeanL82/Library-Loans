@@ -40,3 +40,4 @@
 2025-11-26 12:06:08,889 - INFO - Usuario logueado exitosamente: Juan, Role: member
 2025-11-26 12:06:17,780 - INFO - Libro devuelto: La Llamarada por Juan
 2025-11-26 12:06:39,506 - INFO - Usuario Juan cerro sesion.
+2025-11-26 12:32:57,915 - WARNING - Fallo de login para el usuario: "' OR 1=1 --" o ";
