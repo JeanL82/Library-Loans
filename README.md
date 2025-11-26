@@ -4,7 +4,7 @@ Este proyecto es una mini aplicación de consola (**CLI**) desarrollada en **Pyt
 
 ---
 
-## 🚀 Características principales
+## Características principales
 - **Autenticación segura** con contraseñas hasheadas (SHA-256)
 - **Validación de entrada** (anti inyección tipo SQL)
 - **Registro y login** de usuarios
@@ -19,7 +19,7 @@ Este proyecto es una mini aplicación de consola (**CLI**) desarrollada en **Pyt
 
 ---
 
-## 🧑‍💻 Instrucciones de ejecución
+## Instrucciones de ejecución
 
 1️⃣ **Clonar o descargar** este repositorio:  
 git clone https://github.com/JeanL82/secure-cli-app.git
