@@ -23,3 +23,14 @@
 2025-11-25 14:14:17,802 - INFO - Usuario logueado exitosamente: Admin
 2025-11-25 14:14:46,697 - INFO - Libro prestado: La Llamarada por Admin
 2025-11-25 14:14:58,626 - INFO - Libro devuelto: La Llamarada por Admin
+2025-11-26 10:33:55,652 - INFO - Usuario logueado exitosamente: Admin
+2025-11-26 11:38:22,756 - INFO - Nuevo usuario registrado: Jose 
+2025-11-26 11:48:34,057 - WARNING - Fallo de login para el usuario: 1
+2025-11-26 11:48:38,591 - WARNING - Fallo de login para el usuario: 1
+2025-11-26 11:48:49,313 - INFO - Usuario logueado exitosamente: Admin, Role: librarian
+2025-11-26 11:49:00,560 - WARNING - Fallo de login para el usuario: Jose
+2025-11-26 11:49:13,136 - WARNING - Fallo de login para el usuario: Jean
+2025-11-26 11:49:21,801 - INFO - Nuevo usuario registrado: Juan
+2025-11-26 11:49:42,561 - INFO - Usuario logueado exitosamente: Juan, Role: member
+2025-11-26 11:52:12,329 - INFO - Usuario logueado exitosamente: Juan, Role: member
+2025-11-26 11:52:29,443 - INFO - Libro prestado: La Llamarada por Juan

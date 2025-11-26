@@ -65,7 +65,8 @@ def login():
         for linea in file:
             user_guardado,password_guardado = linea.strip().split(",")
             if username == user_guardado and hashed_password == password_guardado:
-                logging.info(f"Usuario logueado exitosamente: {username}")
+                role = "librarian" if username == "Admin" else "member"
+                logging.info(f"Usuario logueado exitosamente: {username}, Role: {role}")
                 print(f"Bienvenido,{username}!")
                 menu_usuario(username)
                 return 
@@ -186,29 +187,51 @@ def devolver_libro(username):
 
 
 def menu_usuario(username):
+   
+    is_librarian = (username == "Admin")
     while True:
         print(f"\nBienvenido, {username}")
-        print("1. Ver libros")
-        print("2. Agregar libro")
-        print("3. Prestar libro")
-        print("4. Devolver libro")
-        print("5. Cerrar sesión")
-
-        opcion = input("Seleccione una opción: ")
-
-        if opcion == '1':
-            ver_libros()
-        elif opcion == '2':
-            agregar_libros()
-        elif opcion == '3':
-            prestar_libro(username)
-        elif opcion == '4':
-            devolver_libro(username)
-        elif opcion == '5':
-            print("Cerrando sesión...")
-            break
+        if is_librarian:
+            print("1. Ver libros")
+            print("2. Agregar libro")
+            print("3. Prestar libro")
+            print("4. Devolver libro")
+            print("5. Cerrar sesión")
         else:
-            print("Opción inválida. Intente de nuevo.")
+            print("1. Ver libros")
+            print("2. Prestamos")
+            print("3. Devolver Libro")
+            print("4. Cerrar sesión")
+
+        
+        
+        opcion = input("Seleccione una opción: ")
+        if is_librarian:
+            if opcion == '1':
+                ver_libros()
+            elif opcion == '2':
+                agregar_libros(username)  
+            elif opcion == '3':
+                prestar_libro(username)
+            elif opcion == '4':
+                devolver_libro(username)
+            elif opcion == '5':
+                print("Cerrando sesión...")
+                break
+            else:
+                print("Opción inválida. Intente de nuevo.")
+        else:
+            if opcion == '1':
+                ver_libros()
+            elif opcion == '2':
+                prestar_libro(username)  
+            elif opcion == '3':
+                devolver_libro(username)
+            elif opcion == '4':
+                print("Cerrando sesión...")
+                break
+            else:
+                print("Opción inválida. Intente de nuevo.")
 
 
 
