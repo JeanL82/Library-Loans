@@ -1,24 +1,13 @@
-# 📚 Secure CLI App – Sistema de Préstamos de Biblioteca
+About
 
-Este proyecto es una mini aplicación de consola (**CLI**) desarrollada en **Python**, diseñada para manejar usuarios y préstamos de libros en una biblioteca, siguiendo buenas prácticas de **seguridad en el código (Secure Coding Practices)**.
+Este proyecto implementa un sistema de registro e inicio de sesión en una interfaz de línea de comandos (CLI).
+Incluye hashing de contraseñas con SHA-256, validación básica de entrada, manejo de archivos para guardar usuarios y registro de acciones mediante logs.
+Sirve como demostración de conceptos de programación segura.
 
----
+Autores
 
-## Características principales
-- **Autenticación segura** con contraseñas hasheadas (SHA-256)
-- **Validación de entrada** (anti inyección tipo SQL)
-- **Registro y login** de usuarios
-- **Operaciones CRUD** básicas:
-  - Agregar libros
-  - Ver libros registrados
-  - Prestar libros
-  - Devolver libros
-- **Registro de auditoría (logs)** de todas las acciones del usuario
-- **Persistencia** en archivos planos (`.txt`)
-- **Diseño seguro:** aplica el principio de mínimo privilegio y control de errores
-
----
-
+Jean L. Padilla Rivera
+Correo institucional: jpadilla3192@interbayamon.edu
 ## Instrucciones de ejecución
 
 1️⃣ **Clonar o descargar** este repositorio:  
@@ -40,3 +29,38 @@ Puedes iniciar sesión usando este usuario predefinido:
 
 Usuario: Admin  
 Contraseña: 1234
+
+
+Ejemplo de entrada y salida
+
+Registro de usuario:
+
+Enter su nombre de usuario: jean
+Entre la contrasena: ******
+Usuario registrado exitosamente.
+
+
+Inicio de sesión:
+
+Nombre de usuario: jean
+Contrasena: ******
+Inicio de sesión exitoso.
+
+
+Los datos se almacenan en data/users.txt y las acciones se registran en logs/login.log.
+
+Logs y datos
+
+Carpeta de datos: /data (ej. users.txt)
+
+Carpeta de logs: /logs (ej. login.log)
+
+
+El modelo de amenazas utilizado se encuentra en la carpeta docs (como imagen o PDF).
+
+Auditoría de dependencias
+
+Se utilizó pip-audit para verificar vulnerabilidades.
+<img width="741" height="54" alt="Screenshot 2025-11-26 130719" src="https://github.com/user-attachments/assets/32641cd3-9460-4c8e-bf71-e621172d2b18" />
+
+
