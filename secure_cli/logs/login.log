@@ -34,3 +34,9 @@
 2025-11-26 11:49:42,561 - INFO - Usuario logueado exitosamente: Juan, Role: member
 2025-11-26 11:52:12,329 - INFO - Usuario logueado exitosamente: Juan, Role: member
 2025-11-26 11:52:29,443 - INFO - Libro prestado: La Llamarada por Juan
+2025-11-26 12:05:12,157 - INFO - Usuario logueado exitosamente: Admin, Role: librarian
+2025-11-26 12:05:32,581 - INFO - Libro prestado: La Llamarada por Admin
+2025-11-26 12:05:58,077 - INFO - Libro devuelto: La Llamarada por Admin
+2025-11-26 12:06:08,889 - INFO - Usuario logueado exitosamente: Juan, Role: member
+2025-11-26 12:06:17,780 - INFO - Libro devuelto: La Llamarada por Juan
+2025-11-26 12:06:39,506 - INFO - Usuario Juan cerro sesion.

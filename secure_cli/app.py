@@ -130,7 +130,14 @@ def prestar_libro(username):
 
     titulo = input("Ingrese el titulo del libro a prestar: ")
 
-    
+    if os.path.exists(path_prestamos):
+        with open(path_prestamos,'r') as file:
+            for linea in file:
+                libro_titulo, usuario = linea.strip().split(",")
+                if libro_titulo.lower() == titulo.lower():
+                    print("El libro ya esta prestado.")
+                    return
+                
     disponible = False
     with open(path_libros, 'r') as file:
         for linea in file:
@@ -229,6 +236,7 @@ def menu_usuario(username):
                 devolver_libro(username)
             elif opcion == '4':
                 print("Cerrando sesión...")
+                logging.info(f"Usuario {username} cerro sesion.")
                 break
             else:
                 print("Opción inválida. Intente de nuevo.")
