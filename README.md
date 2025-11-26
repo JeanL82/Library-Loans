@@ -56,9 +56,9 @@ Carpeta de datos: /data (ej. users.txt)
 Carpeta de logs: /logs (ej. login.log)
 
 
-El modelo de amenazas utilizado se encuentra en la carpeta docs (como imagen o PDF).
+El modelo de amenazas
+<img width="1536" height="1024" alt="Threat Model" src="https://github.com/user-attachments/assets/a883b965-51ce-4859-9a78-36bcabb6a127" />
 
-Auditoría de dependencias
 
 Se utilizó pip-audit para verificar vulnerabilidades.
 <img width="741" height="54" alt="Screenshot 2025-11-26 130719" src="https://github.com/user-attachments/assets/32641cd3-9460-4c8e-bf71-e621172d2b18" />
